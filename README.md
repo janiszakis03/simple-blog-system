@@ -8,12 +8,12 @@ Follow these steps to install and run the application locally:
 
 1. **Clone the Repository:**
    ```
-   git clone https://github.com/username/repository.git
+   git clone https://github.com/janiszakis03/simple-blog-system
    ```
 
 2. **Install Composer Dependencies:**
    ```
-   cd repository
+   cd simple-blog-system
    composer install
    ```
 
@@ -48,7 +48,7 @@ Follow these steps to install and run the application locally:
    ```
 
 9. **Access the Application:**
-   Open your web browser and navigate to `http://localhost:8000`.
+   Open your web browser and navigate to `http://127.0.0.1:8000`.
 
 ## Dependencies
 
