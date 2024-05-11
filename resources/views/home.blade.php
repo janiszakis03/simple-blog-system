@@ -23,6 +23,16 @@
                 </div>
             </div>
         </div>
+    @else
+        <div class="py-6 px-4 sm:px-0">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                    <div class="p-6 text-gray-900 dark:text-gray-100">
+                        You need to <a href="{{ route('login') }}" class="text-blue-600 hover:text-blue-800">log in</a> in order to create posts.
+                    </div>
+                </div>
+            </div>
+        </div>
     @endauth
 
     @if (count($posts))
@@ -30,6 +40,14 @@
             <x-post-card :post="$post" class="{{ !auth()->check() && $loop->first ? 'py-6' : 'pb-6' }}" />
         @endforeach
     @else
-        <h3 class="text-sm text-gray-400">{{ __('There are no posts yet...') }}</h3>
+        <div class="px-4 sm:px-0">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                    <div class="p-6 text-gray-900 dark:text-gray-100">
+                        {{ __("There are no posts yet...") }}
+                    </div>
+                </div>
+            </div>
+        </div>
     @endif
 </x-app-layout>
