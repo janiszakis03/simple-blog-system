@@ -47,14 +47,28 @@ Follow these steps to install and run the application locally:
    php artisan serve
    ```
 
-9. **Access the Application:**
+9. **Compile Assets:**
+   Compile CSS and JavaScript assets:
+   ```
+   npm run dev
+   ```
+
+10. **Serve the Application:**
+   ```
+   php artisan serve
+   ```
+
+11. **Access the Application:**
    Open your web browser and navigate to `http://127.0.0.1:8000`.
 
 ## Dependencies
 
 - PHP
 - Composer
+- Node.js
+- NPM
 - Laravel
+- Laravel Breeze
 
 ## Contributing
 
