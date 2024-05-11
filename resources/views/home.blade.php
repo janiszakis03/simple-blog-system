@@ -37,7 +37,7 @@
 
     @if (count($posts))
         @foreach($posts as $post)
-            <x-post-card :post="$post" class="{{ !auth()->check() && $loop->first ? 'py-6' : 'pb-6' }}" />
+            <x-post-card :post="$post" class="pb-6" />
         @endforeach
     @else
         <div class="px-4 sm:px-0">

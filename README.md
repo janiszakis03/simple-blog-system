@@ -13,38 +13,38 @@ Follow these steps to install and run the application locally:
 
 2. **Install Composer Dependencies:**
    ```
-   cd simple-blog-system
+   cd repository
    composer install
    ```
 
-3. **Create Environment File:**
+3. **Install NPM Dependencies:**
+   ```
+   npm install
+   ```
+
+4. **Create Environment File:**
    ```
    cp .env.example .env
    ```
 
-4. **Generate Application Key:**
+5. **Generate Application Key:**
    ```
    php artisan key:generate
    ```
 
-5. **Set Up the Database:**
+6. **Set Up the Database:**
    - Configure your `.env` file with your database connection details.
    - Create a new database for the application.
 
-6. **Run Database Migrations:**
+7. **Run Database Migrations:**
    ```
    php artisan migrate
    ```
 
-7. **Run Database Seeders (Optional):**
+8. **Run Database Seeders (Optional):**
    If you want to populate the database with sample data, you can run seeders:
    ```
    php artisan db:seed
-   ```
-
-8. **Serve the Application:**
-   ```
-   php artisan serve
    ```
 
 9. **Compile Assets:**
