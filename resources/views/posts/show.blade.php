@@ -11,6 +11,15 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <h2 class="text-xl font-semibold mb-4">{{ $post->title }}</h2>
                     <p class="text-sm dark:text-gray-400 text-gray-600">{!! nl2br(e($post->body)) !!}</p>
+                    <p class="mt-4 text-sm dark:text-gray-500 text-gray-400">Posted by {{ $post->user->name }} on {{ $post->created_at->format('M d, Y') }}
+                        @if (count($post->categories))
+                            in 
+                            @foreach ($post->categories as $category)
+                                <a href="{{ route('categories.show', $category) }}"><span class="text-blue-600 hover:underline">{{ $category->category }}</span></a>
+                                @if (!$loop->last), @endif
+                            @endforeach
+                        @endif
+                    </p>
 
                     @auth
                         @if(auth()->user()->id === $post->user_id)
